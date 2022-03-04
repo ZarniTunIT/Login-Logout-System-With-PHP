@@ -22,12 +22,17 @@
                 Incorrect Email or Password
             </div>
         <?php endif ?>
+        <?php if (isset($_GET['login'])) : ?>
+            <div class="alert alert-warning">
+                Please Login First
+            </div>
+        <?php endif ?>
         <form action="actions/login.php" method="post" class="mb-3">
             <input type="email" name="email" placeholder="Email" class="form-control mb-2" required>
             <input type="password" name="password" placeholder="Password" class="form-control mb-2" required>
             <button class="btn btn-lg btn-primary w-100">Login</button>
         </form>
-        <a href="register.php">Register</a>
+        <a href="#">Register</a>
     </div>
 </body>
 </html>
