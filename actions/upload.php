@@ -9,6 +9,7 @@ if ($error) {
 }
 
 if ($type === "image/jpeg" or $type === "image/jpg" or $type === "image/gif" or $type === "image/png") {
+    mkdir("photos");
     move_uploaded_file($tmp, "photos/profile.jpg");
     header("location: ../profile.php");
 } else {
